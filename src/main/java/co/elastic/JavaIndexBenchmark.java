@@ -80,8 +80,9 @@ public class JavaIndexBenchmark {
                 throw new RuntimeException(e);
             }
             client = new PreBuiltTransportClient(settings)
-                    .addTransportAddress(new TransportAddress(host, 9300))
-                    .addTransportAddress(new TransportAddress(host, 9301));
+                    .addTransportAddress(new TransportAddress(host, 9300)
+                    //).addTransportAddress(new TransportAddress(host, 9301)
+                    );
             bulkRequestBuilder = new BulkRequestBuilder(client, BulkAction.INSTANCE);
         }
 
@@ -129,8 +130,9 @@ public class JavaIndexBenchmark {
 
         public JMHRestBulkProcessor() {
             client = new RestHighLevelClient(RestClient.builder(
-                    new HttpHost("localhost", 9200, "http"),
-                    new HttpHost("localhost", 9201, "http")));
+                    new HttpHost("localhost", 9200, "http")
+            //       , new HttpHost("localhost", 9201, "http")
+            ));
 
             BulkProcessor.Builder builder = BulkProcessor.builder(
                     (request, bulkListener) ->
