@@ -40,12 +40,19 @@ Generated with :
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>transport</artifactId>
-            <version>7.4.0</version>
+<!--            <version>7.4.0</version>-->
+            <version>6.3.2</version>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>7.4.0</version>
+<!--            <version>7.4.0</version>-->
+            <version>6.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.searchbox</groupId>
+            <artifactId>jest</artifactId>
+            <version>5.3.3</version>
         </dependency>
     </dependencies>
 
